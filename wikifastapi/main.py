@@ -8,7 +8,7 @@ app = FastAPI()
 
 ## Mongodb
 
-mongodb_url = 'mongodb://root:example@localhost:27017/'
+mongodb_url = 'mongodb://root:example@mongodb:27017/'
 client = pymongo.MongoClient(mongodb_url)
 database = 'wikiarticles'
 collection = 'random'
@@ -35,11 +35,3 @@ def mongoWordCount(word):
         word_count = word_count + str(each).count(word)
     return "Word Count For ' " + word + "' : " + str(word_count)
 
-
-@app.get('/search/elastic/{word}')
-def searchDataElastic():
-    elastic_url = 'http://localhost:9200'
-    es = Elasticsearch(elastic_url)
-    resp = es.search(index='test-index', query={'match_all': {}})
-    result = 'Got %d Hits:' % resp['hits']['total']['value']
-    return result

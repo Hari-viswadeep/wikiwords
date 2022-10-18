@@ -1,0 +1,19 @@
+# Wikipedia App Using Docker Compose
+
+This python utility consumes wiki api & read articles based on articles.txt file & stores the data in mongodb.
+FastAPI app is created to run word count on this data stored in mongodb.
+
+# Technical Stack
+
+1. Python
+1. Mongodb
+1. MongoExpress
+1. FastAPI
+1. Uvicorn
+
+## How to Run
+
+Use docker compose to created the containers.
+
+http://localhost:8081/	## MongoExpress
+http://localhost:8000/wordcount/{word} ## FastAPI app

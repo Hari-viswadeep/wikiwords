@@ -6,7 +6,7 @@ import pymongo
 
 wiki_base = \
   'https://en.wikipedia.org/w/api.php?action=query&prop=revisions&rvprop=content&rvsection=0&format=json&titles='
-mongodb_url = 'mongodb://root:example@localhost:27017/'
+mongodb_url = 'mongodb://root:example@mongodb:27017/'
 client = pymongo.MongoClient(mongodb_url)
 filename = 'articles.txt'
 database = 'wikiarticles'
@@ -23,7 +23,7 @@ def readTitles():
 
 def mongoConnect():
   database = client['local']
-  print client.list_database_names()
+  print(client.list_database_names())
 
 
 def mongoCreate(data):
