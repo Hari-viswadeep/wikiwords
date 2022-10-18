@@ -2,7 +2,6 @@
 # -*- coding: utf-8 -*-
 from fastapi import FastAPI
 import pymongo
-from elasticsearch import Elasticsearch
 
 app = FastAPI()
 

@@ -1,4 +1,10 @@
 mango
 ferrari
 maruti
-Suzuki
+Formula_One
+Michael_Schumacher
+ducati
+Suzuki_Hayabusa
+travel
+riding
+BMW
